@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+/*
+ * Tailwind CSS v4 - CSS-first configuration using @theme directive
+ * Design tokens are defined here to create utility classes
+ */
+@theme {
+  /* Custom breakpoints */
+  --breakpoint-xs: 450px;
+  --breakpoint-2xs: 380px;
+
+  /* Container */
+  --container-2xl: 1400px;
+
+  /* Teal-based color palette (WCAG AAA compliant) */
+  --color-primary: hsl(174 84% 40%);
+  --color-primary-foreground: hsl(60 9.1% 97.8%);
+
+  --color-secondary: hsl(174 60% 70%);
+  --color-secondary-foreground: hsl(24 9.8% 10%);
+
+  --color-destructive: hsl(2 100% 50%);
+  --color-destructive-foreground: hsl(60 9.1% 97.8%);
+
+  --color-muted: hsl(174 30% 20%);
+  --color-muted-foreground: hsl(25 5.3% 60%);
+
+  --color-accent: hsl(174 84% 50%);
+  --color-accent-foreground: hsl(24 9.8% 10%);
+
+  /* Background and foreground */
+  --color-background: hsl(0 0% 8%);
+  --color-foreground: hsl(0 0% 100%);
+
+  /* Card colors */
+  --color-card: hsl(20 14.3% 4.1%);
+  --color-card-foreground: hsl(0 0% 100%);
+
+  /* Popover colors */
+  --color-popover: hsl(20 14.3% 4.1%);
+  --color-popover-foreground: hsl(0 0% 100%);
+
+  /* Border and input colors */
+  --color-border: hsl(217.2 32.6% 17.5%);
+  --color-input: hsl(217.2 32.6% 17.5%);
+  --color-ring: hsl(174 84% 40%);
+
+  /* Border radius */
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  /* Font family */
+  --font-sans: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-mono, ui-monospace, monospace);
+}
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  /* Focus visible styles for accessibility */
+  :focus-visible {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background outline-none;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply absolute top-4 left-4 z-[100] -translate-y-16 rounded-md bg-primary px-4 py-2 text-primary-foreground transition-transform focus:translate-y-0;
+  }
+}
