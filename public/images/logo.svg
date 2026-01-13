@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#11A697"></circle>
+
+  <!-- Outer equilateral triangle (downward, vertices on circle) -->
+  <polygon points="256,512 34.297,128 477.703,128" fill="#FFFFFF"></polygon>
+
+  <!-- Inner equilateral triangle (upward, medial triangle) -->
+  <polygon points="145.149,320 366.851,320 256,128" fill="#11A697"></polygon>
+</svg>
