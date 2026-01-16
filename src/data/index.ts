@@ -4,7 +4,7 @@
  * Re-exports all data and helper functions for easy importing.
  *
  * @example
- * import { socialLinks, navLinks } from '@/data';
+ * import { socialLinks, personalInfo, navLinks } from '@/data';
  */
 
 // Social Links
@@ -15,6 +15,9 @@ export {
   getFooterSocialLinks,
   getContactPageLinks,
 } from './social';
+
+// Personal Info
+export { personalInfo } from './personal';
 
 // Navigation
 export { navLinks } from './navigation';
