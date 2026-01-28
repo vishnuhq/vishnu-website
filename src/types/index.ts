@@ -3,6 +3,41 @@
  */
 
 /**
+ * Work category for filtering
+ */
+export type WorkCategory = 'frontend' | 'backend' | 'fullstack' | 'aiml' | 'desktop' | 'mobile' | 'devops';
+
+/**
+ * Work item data structure
+ */
+export interface Work {
+  /** URL-friendly identifier */
+  slug: string;
+  /** Work title */
+  title: string;
+  /** Short description for cards (< 150 words) */
+  shortDescription: string;
+  /** Full description for modal (multi-paragraph) */
+  fullDescription: string;
+  /** Path to main image in /public/images/work/ */
+  mainImage: string;
+  /** GitHub repository URL */
+  githubUrl?: string;
+  /** Live deployment URL */
+  liveUrl?: string;
+  /** Complete list of technologies used */
+  techStack: string[];
+  /** Top technologies shown on card (1–5 items) */
+  topTech: string[];
+  /** Categories for filtering */
+  category: WorkCategory[];
+  /** Show on home page featured section */
+  featured: boolean;
+  /** Sort order (lower = first) */
+  order: number;
+}
+
+/**
  * Social link data structure
  */
 export interface SocialLink {
