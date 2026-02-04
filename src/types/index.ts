@@ -38,6 +38,25 @@ export interface Work {
 }
 
 /**
+ * Timeline item for the about page journey sections
+ * Used for experience, education, and research/publications
+ */
+export interface TimelineItem {
+  /** Display year (e.g., '2025', 'Now') */
+  year: string;
+  /** Role, degree, or paper title */
+  title: string;
+  /** Company, institution, or publisher */
+  company: string;
+  /** Optional link for the company/institution/DOI */
+  companyUrl?: string;
+  /** Conversational description */
+  description: string;
+  /** Highlight with teal accent (use for current/active items) */
+  highlight?: boolean;
+}
+
+/**
  * Social link data structure
  */
 export interface SocialLink {

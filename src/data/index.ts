@@ -30,3 +30,10 @@ export { personalInfo } from './personal';
 
 // Navigation
 export { navLinks } from './navigation';
+
+// About page
+export {
+  getExperienceTimeline,
+  getEducationTimeline,
+  getResearchTimeline,
+} from './about';
