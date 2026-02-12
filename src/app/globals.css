@@ -78,3 +78,57 @@
     @apply absolute top-4 left-4 z-[100] -translate-y-16 rounded-md bg-primary px-4 py-2 text-primary-foreground transition-transform focus:translate-y-0;
   }
 }
+
+/* Scrollbar - auto-hide overlay style (like macOS) */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable; /* Prevents layout shift when scrollbar appears/disappears */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox - hidden by default */
+}
+
+/* Show scrollbar on scroll/hover (Firefox) */
+html.is-scrolling,
+html:hover {
+  scrollbar-color: hsl(174 30% 20%) transparent;
+}
+
+/* WebKit scrollbar (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar thumb - hidden by default, shown when scrolling */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+/* Show scrollbar when scrolling or hovering */
+html.is-scrolling::-webkit-scrollbar-thumb,
+html:hover::-webkit-scrollbar-thumb {
+  background: hsl(174 30% 20%);
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb:hover,
+html:hover::-webkit-scrollbar-thumb:hover {
+  background: hsl(174 84% 40%);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
