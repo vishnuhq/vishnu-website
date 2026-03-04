@@ -46,6 +46,7 @@ function getRotationForIndex(index: number): number {
 }
 
 const animateLettersOnScroll = (containerRef: RefObject<HTMLDivElement | null>) => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const lettersContainer = containerRef.current;
   const letterElements = lettersContainer?.querySelectorAll('.about-letter');
 

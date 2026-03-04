@@ -1,13 +1,13 @@
 'use client';
 
 import { PropsWithChildren, useEffect, useRef } from 'react';
+import { MotionConfig } from 'framer-motion';
 import Lenis from 'lenis';
 
 /**
  * Animations Provider - Wraps the app with Lenis smooth scroll
  *
  * Lenis is a lightweight, performant smooth scroll library
- * Replaces locomotive-scroll which is deprecated
  *
  * Features:
  * - Smooth, responsive scrolling (lerp-based)
@@ -67,5 +67,9 @@ export default function Animations({ children }: PropsWithChildren) {
     };
   }, []);
 
-  return <div className="main">{children}</div>;
+  return (
+    <MotionConfig reducedMotion="user">
+      <div className="main">{children}</div>
+    </MotionConfig>
+  );
 }
