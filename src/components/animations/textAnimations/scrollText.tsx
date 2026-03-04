@@ -137,7 +137,8 @@ export function LetterCollision() {
 
   return (
     <div ref={containerRef} className="scroll-smooth bg-background">
-      <div className="flex h-screen flex-col items-center justify-center gap-2 px-4 pb-24 sm:gap-4 sm:px-8">
+      <h1 className="sr-only">VishnuHQ - I make software slightly less chaotic</h1>
+      <div aria-hidden="true" className="flex h-screen flex-col items-center justify-center gap-2 px-4 pb-24 sm:gap-4 sm:px-8">
         {/* Line 1: VishnuHQ (biggest) */}
         <div className="flex flex-nowrap items-baseline justify-center">
           <LetterDisplay word={brandName1} startIndex={idxBrand1} />

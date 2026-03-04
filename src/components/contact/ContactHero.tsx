@@ -138,7 +138,8 @@ export function ContactHero() {
 
   return (
     <div ref={containerRef} className="h-screen overflow-hidden bg-background">
-      <div className="flex h-full flex-col items-center justify-center gap-4 px-4 sm:gap-6 sm:px-8">
+      <h1 className="sr-only">Vishnu Vardhan Putta - From code to content, find me here</h1>
+      <div aria-hidden="true" className="flex h-full flex-col items-center justify-center gap-4 px-4 sm:gap-6 sm:px-8">
         {/* Line 1: Vishnu Vardhan Putta (single line, flex-nowrap per word) */}
         <div className="flex flex-nowrap items-baseline justify-center">
           {nameWords.map((word, wordIndex) => (
