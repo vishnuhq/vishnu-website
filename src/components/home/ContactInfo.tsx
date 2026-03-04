@@ -37,10 +37,11 @@ export default function ContactInfo() {
     : `${copyrightStartYear}-${currentYear}`;
 
   return (
-    <motion.div
+    <motion.footer
       style={{ y }}
       ref={container}
-      className="relative flex min-h-screen flex-col items-center bg-background px-6 pt-32 pb-24 text-white will-change-transform backface-hidden transform-gpu"
+      role="contentinfo"
+      className="relative flex min-h-screen flex-col items-center bg-background px-6 pt-32 pb-24 text-white transform-gpu"
     >
       <div className="flex min-h-full w-[90%] flex-1 flex-col items-center pt-[100px] sm:pt-[150px]">
         {/* Top content */}
@@ -125,6 +126,6 @@ export default function ContactInfo() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.footer>
   );
 }

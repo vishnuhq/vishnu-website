@@ -18,11 +18,11 @@ export default function Header() {
   const isHomepage = pathname === '/';
 
   return (
-    <>
+    <header role="banner">
       {/* Logo - visible on all pages except homepage */}
       {!isHomepage && <Logo />}
       {/* Menu Component - Fixed positioned, always accessible */}
       <Menu />
-    </>
+    </header>
   );
 }

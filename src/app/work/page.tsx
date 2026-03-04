@@ -53,7 +53,7 @@ export default function WorkPage() {
   };
 
   return (
-    <main className="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       {/* Hero Section - Dark background with letter collision */}
       <WorkHero />
 
@@ -96,6 +96,6 @@ export default function WorkPage() {
       <div id="work-gallery">
         <WorkGallery />
       </div>
-    </main>
+    </div>
   );
 }

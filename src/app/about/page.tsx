@@ -54,7 +54,7 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <AboutHero />
 
       <AnimatePresence>
@@ -94,6 +94,6 @@ export default function AboutPage() {
       <div id="about-bio">
         <BioSection />
       </div>
-    </main>
+    </div>
   );
 }

@@ -53,7 +53,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       {/* Hero Section - Dark background with letter collision */}
       <ContactHero />
 
@@ -96,6 +96,6 @@ export default function ContactPage() {
       <div id="contact-links">
         <ContactLinks />
       </div>
-    </main>
+    </div>
   );
 }
