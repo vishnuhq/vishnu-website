@@ -13,7 +13,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.2",
     "gsap": "^3.14.2",

@@ -60,13 +60,6 @@ export function getPrimarySocialLinks(): SocialLink[] {
 }
 
 /**
- * Get all social links
- */
-export function getAllSocialLinks(): SocialLink[] {
-  return socialLinks;
-}
-
-/**
  * Get footer social links (GitHub, LinkedIn, Instagram only)
  */
 export function getFooterSocialLinks(): SocialLink[] {

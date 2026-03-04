@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef, type ReactElement } from 'react';
 import gsap from 'gsap';
 
 interface MagneticProps {
-  children: React.ReactElement;
+  children: ReactElement;
   fullWidth?: boolean;
 }
 

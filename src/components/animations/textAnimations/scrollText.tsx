@@ -172,5 +172,3 @@ export function LetterCollision() {
     </div>
   );
 }
-
-export default LetterCollision;

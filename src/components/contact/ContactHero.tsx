@@ -179,5 +179,3 @@ export function ContactHero() {
     </div>
   );
 }
-
-export default ContactHero;

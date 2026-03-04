@@ -172,5 +172,3 @@ export function WorkHero() {
     </div>
   );
 }
-
-export default WorkHero;

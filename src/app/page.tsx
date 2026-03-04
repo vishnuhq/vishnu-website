@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SlidingImages from '@/components/home/SlidingImages';
@@ -12,12 +12,9 @@ import { getFeaturedWork } from '@/data/work';
 export default function Home() {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const scrollContainerRef = useRef(null);
 
   // Get first 6 featured work items sorted by order
-  const featuredWork = useMemo(() => {
-    return getFeaturedWork().slice(0, 6);
-  }, []);
+  const featuredWork = getFeaturedWork().slice(0, 6);
 
   // Delay scroll button appearance by 0.25s
   useEffect(() => {
@@ -53,7 +50,7 @@ export default function Home() {
   };
 
   return (
-    <div ref={scrollContainerRef} className="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <LetterCollision />
       <AnimatePresence>
         {showScrollButton && (

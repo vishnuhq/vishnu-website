@@ -129,5 +129,3 @@ export function ContactLinks() {
     </section>
   );
 }
-
-export default ContactLinks;

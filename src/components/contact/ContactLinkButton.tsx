@@ -77,5 +77,3 @@ export function ContactLinkButton({ name, url, icon, displayText }: ContactLinkB
     </Magnetic>
   );
 }
-
-export default ContactLinkButton;
