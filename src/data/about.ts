@@ -57,7 +57,7 @@ const researchData: TimelineItem[] = [
     year: '2024',
     title:
       'Applications of Innovations in Computational Intelligence, Big Data Analytics, and Internet of Things',
-    company: 'Springer',
+    company: 'Emerald',
     companyUrl:
       'https://www.infoagepub.com/products/Innovations-in-Computational-Intelligence-Big-Data-Analytics-and-Internet-of-Things',
     description:
