@@ -23,15 +23,14 @@ function CategoryFilters({
   return (
     <div
       className="mb-10 flex flex-wrap justify-center gap-3"
-      role="tablist"
+      role="group"
       aria-label="Filter projects by category"
     >
       <Magnetic>
         <button
-          role="tab"
-          aria-selected={active === null}
+          aria-pressed={active === null}
           onClick={() => onSelect(null)}
-          className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 sm:text-base ${
+          className={`relative min-h-[44px] rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 sm:text-base ${
             active === null
               ? 'bg-teal-500 text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -51,10 +50,9 @@ function CategoryFilters({
       {categories.map((cat) => (
         <Magnetic key={cat}>
           <button
-            role="tab"
-            aria-selected={active === cat}
+            aria-pressed={active === cat}
             onClick={() => onSelect(cat)}
-            className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 sm:text-base ${
+            className={`relative min-h-[44px] rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 sm:text-base ${
               active === cat
                 ? 'bg-teal-500 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -345,6 +343,7 @@ function DetailModal({
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 transition-colors hover:text-teal-700 sm:text-base"
+              aria-label={`View ${item.title} on GitHub`}
             >
               <svg
                 className="h-4 w-4 sm:h-[18px] sm:w-[18px]"
@@ -367,6 +366,7 @@ function DetailModal({
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-teal-600 transition-colors hover:text-teal-700 sm:text-base"
+              aria-label={`View ${item.title} live site`}
             >
               <svg
                 className="h-4 w-4 sm:h-[18px] sm:w-[18px]"

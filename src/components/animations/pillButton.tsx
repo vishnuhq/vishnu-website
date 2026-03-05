@@ -57,9 +57,9 @@ export default function PillButton({
 
   return (
     <Magnetic>
-      <button
+      <span
         className={cn(
-          'relative flex cursor-pointer items-center gap-2 overflow-hidden',
+          'relative inline-flex items-center gap-2 overflow-hidden',
           'rounded-full bg-teal-500 px-4 py-1.5 sm:px-5 sm:py-2',
           'text-base font-normal text-white sm:text-lg',
           className
@@ -74,7 +74,7 @@ export default function PillButton({
           ref={circle}
           className="absolute left-1/2 top-[100%] h-[150%] w-full -translate-x-1/2 rounded-full bg-teal-400"
         />
-      </button>
+      </span>
     </Magnetic>
   );
 }
