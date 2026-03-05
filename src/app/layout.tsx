@@ -4,7 +4,7 @@ import './globals.css';
 import Animations from './animations';
 import Header from '@/components/layout/Header';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   title: 'VishnuHQ',
@@ -78,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body className={`overflow-x-hidden ${inter.className}`}>
+      <body className={`overflow-x-hidden font-sans ${inter.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
