@@ -13,6 +13,23 @@ export const metadata: Metadata = {
     description:
       'Projects and work by Vishnu Vardhan Putta.',
     url: 'https://vishnuhq.com/work',
+    type: 'website',
+    siteName: 'VishnuHQ',
+    images: [
+      {
+        url: '/images/og/default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Work by Vishnu Vardhan Putta',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Work | VishnuHQ',
+    description:
+      'Projects and work by Vishnu Vardhan Putta.',
+    images: ['/images/og/default.png'],
   },
 };
 

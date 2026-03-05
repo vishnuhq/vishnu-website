@@ -85,14 +85,30 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
+              '@id': 'https://vishnuhq.com/#person',
               name: 'Vishnu Vardhan Putta',
               jobTitle: 'Full Stack Developer',
               url: 'https://vishnuhq.com',
               email: 'mailto:vishnuhq.me@gmail.com',
+              image: 'https://vishnuhq.com/images/profile/vishnu.webp',
+              description:
+                'Full Stack Developer and CS graduate from Stevens Institute of Technology.',
+              alumniOf: [
+                {
+                  '@type': 'CollegeOrUniversity',
+                  name: 'Stevens Institute of Technology',
+                  url: 'https://www.stevens.edu/',
+                },
+                {
+                  '@type': 'CollegeOrUniversity',
+                  name: 'Sree Vidyanikethan Engineering College',
+                  url: 'https://www.svec.education',
+                },
+              ],
               sameAs: [
                 'https://github.com/vishnuhq',
-                'https://linkedin.com/in/vishnuhq',
-                'https://instagram.com/vishnuhq',
+                'https://www.linkedin.com/in/vishnuhq',
+                'https://www.instagram.com/vishnuhq',
               ],
               knowsAbout: [
                 'Full Stack Development',

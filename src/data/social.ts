@@ -16,7 +16,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/vishnuhq',
+    url: 'https://www.linkedin.com/in/vishnuhq',
     icon: 'linkedin',
     primary: true,
     username: 'vishnuhq',
@@ -25,7 +25,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'Instagram',
-    url: 'https://instagram.com/vishnuhq',
+    url: 'https://www.instagram.com/vishnuhq',
     icon: 'instagram',
     primary: true,
     username: 'vishnuhq',
