@@ -54,7 +54,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <AboutHero />
 
       <AnimatePresence>

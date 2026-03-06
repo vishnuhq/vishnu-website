@@ -6,7 +6,7 @@ import ScrollButton from '@/components/ui/ScrollButton';
 
 export default function WorkPage() {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <WorkHero />
       <ScrollButton targetId="work-gallery" />
       <div id="work-gallery">

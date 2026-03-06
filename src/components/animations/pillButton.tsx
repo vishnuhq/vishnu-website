@@ -48,12 +48,12 @@ export default function PillButton({
     };
   }, []);
 
-  const manageMouseEnter = () => {
+  const handleMouseEnter = () => {
     if (timeoutId.current) clearTimeout(timeoutId.current);
     timeline.current?.tweenFromTo('enter', 'exit');
   };
 
-  const manageMouseLeave = () => {
+  const handleMouseLeave = () => {
     timeoutId.current = setTimeout(() => {
       timeline.current?.play();
     }, 300);
@@ -68,8 +68,8 @@ export default function PillButton({
           'text-base font-normal text-white sm:text-lg',
           className
         )}
-        onMouseEnter={manageMouseEnter}
-        onMouseLeave={manageMouseLeave}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         {...attributes}
       >
         <span className="relative z-10 whitespace-nowrap">{children}</span>

@@ -6,7 +6,7 @@ import ScrollButton from '@/components/ui/ScrollButton';
 
 export default function ContactPage() {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <ContactHero />
       <ScrollButton targetId="contact-links" />
       <div id="contact-links">

@@ -70,7 +70,7 @@ export default function ContactInfo() {
           {/* Email and Button - CENTERED, stacked vertically */}
           <div className="flex flex-col items-center gap-4">
             {/* Email - slides from left */}
-            <motion.div style={{ x: xLeft }} className="will-change-transform transform-gpu">
+            <motion.div style={{ x: xLeft }} className="transform-gpu">
               <a
                 href={`mailto:${email}`}
                 className="inline-block rounded-full border border-gray-600 px-4 py-1.5 text-base text-white transition-colors hover:border-teal-400 hover:text-teal-400 sm:px-5 sm:py-2 sm:text-lg"
@@ -81,7 +81,7 @@ export default function ContactInfo() {
             </motion.div>
 
             {/* Button - slides from right */}
-            <motion.div style={{ x: xRight }} className="will-change-transform transform-gpu">
+            <motion.div style={{ x: xRight }} className="transform-gpu">
               <Link href="/contact">
                 <PillButton>{contactButtonText}</PillButton>
               </Link>

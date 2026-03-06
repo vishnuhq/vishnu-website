@@ -66,10 +66,7 @@ export default function RootTemplate({ children }: PropsWithChildren) {
         {/* Uses white bg to match SlidingImages section above */}
         <motion.div style={{ height }} className="relative bg-white">
           <div
-            className="absolute left-[-10%] z-10 h-[1050%] w-[120%] rounded-b-[100%] bg-white"
-            style={{
-              boxShadow: '0 60px 50px rgba(0, 0, 0, 0.748)',
-            }}
+            className="absolute left-[-10%] z-10 h-[1050%] w-[120%] rounded-b-[100%] bg-white shadow-[0_60px_50px_rgba(0,0,0,0.748)]"
           />
         </motion.div>
       </div>

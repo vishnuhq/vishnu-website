@@ -10,7 +10,7 @@ export default function Home() {
   const featuredWork = getFeaturedWork().slice(0, 6);
 
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <LetterCollision />
       <ScrollButton targetId="description" />
       <div id="description">

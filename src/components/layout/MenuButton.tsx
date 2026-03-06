@@ -120,12 +120,12 @@ export default function MenuButton({
       );
   }, []);
 
-  const manageMouseEnter = () => {
+  const handleMouseEnter = () => {
     if (timeoutId.current) clearTimeout(timeoutId.current);
     hoverTimeline.current?.tweenFromTo('enter', 'exit');
   };
 
-  const manageMouseLeave = () => {
+  const handleMouseLeave = () => {
     timeoutId.current = setTimeout(() => {
       hoverTimeline.current?.play();
     }, 300);
@@ -135,8 +135,8 @@ export default function MenuButton({
     <Magnetic>
       <button
         onClick={onToggle}
-        onMouseEnter={manageMouseEnter}
-        onMouseLeave={manageMouseLeave}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         className={cn(
           // Size: h-10 w-10 (40px) on mobile for easy touch, md:h-11 md:w-11 (44px) for desktop
           'relative z-50 h-10 w-10 cursor-pointer overflow-hidden rounded-full bg-teal-500 md:h-11 md:w-11',

@@ -43,12 +43,12 @@ export function ContactLinkButton({ name, url, icon, displayText }: ContactLinkB
     };
   }, []);
 
-  const manageMouseEnter = () => {
+  const handleMouseEnter = () => {
     if (timeoutId.current) clearTimeout(timeoutId.current);
     timeline.current?.tweenFromTo('enter', 'exit');
   };
 
-  const manageMouseLeave = () => {
+  const handleMouseLeave = () => {
     timeoutId.current = setTimeout(() => {
       timeline.current?.play();
     }, 300);
@@ -67,8 +67,8 @@ export function ContactLinkButton({ name, url, icon, displayText }: ContactLinkB
         target={target}
         rel={rel}
         className="relative flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-full bg-teal-500 px-8 py-4 text-lg text-white sm:gap-4 sm:px-12 sm:py-5 sm:text-xl"
-        onMouseEnter={manageMouseEnter}
-        onMouseLeave={manageMouseLeave}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         aria-label={`${name}: ${displayText}`}
       >
         <SocialIcon name={icon} className="relative z-10 size-5 shrink-0 sm:size-6" />
