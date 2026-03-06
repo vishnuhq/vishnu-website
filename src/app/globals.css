@@ -8,6 +8,9 @@
   /* Custom breakpoints */
   --breakpoint-xs: 450px;
 
+  /* Container */
+  --container-2xl: 1400px;
+
   /* Teal-based color palette (WCAG AAA compliant) */
   --color-primary: hsl(174 84% 40%);
   --color-primary-foreground: hsl(60 9.1% 97.8%);
