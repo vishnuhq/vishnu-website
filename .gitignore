@@ -32,6 +32,9 @@ yarn-error.log*
 # Vercel
 .vercel
 
+# Turbopack
+.turbo/
+
 # IDE
 .idea/
 .vscode/
@@ -45,7 +48,3 @@ Thumbs.db
 # Misc
 *.pem
 *.log
-
-# TypeScript
-*.tsbuildinfo
-

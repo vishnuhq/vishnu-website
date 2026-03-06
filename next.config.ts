@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
 
   // Optimized package imports
   experimental: {
-    optimizePackageImports: ['gsap', '@gsap/react', 'lenis', 'lucide-react', 'framer-motion'],
+    optimizePackageImports: ['gsap', 'lenis', 'lucide-react', 'framer-motion'],
   },
 
   // Image optimization configuration
@@ -36,11 +36,15 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            value: '0',
           },
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
           },
         ],
       },
