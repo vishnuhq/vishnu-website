@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, type ReactElement } from 'react';
-import gsap from 'gsap';
+import { gsap, easings } from '@/lib/gsap';
 
 interface MagneticProps {
   children: ReactElement;
@@ -24,11 +24,11 @@ export default function Magnetic({ children, fullWidth = false }: MagneticProps)
 
     const xTo = gsap.quickTo(element, 'x', {
       duration: 1,
-      ease: 'elastic.out(1, 0.3)',
+      ease: easings.elastic,
     });
     const yTo = gsap.quickTo(element, 'y', {
       duration: 1,
-      ease: 'elastic.out(1, 0.3)',
+      ease: easings.elastic,
     });
 
     const handleMouseMove = (e: MouseEvent) => {

@@ -1,10 +1,7 @@
 'use client';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { RefObject, useEffect, useRef } from 'react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Text content for work page hero
 // Line 1: "Vishnu Vardhan Putta" - each word separate to prevent breaking

@@ -1,8 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import gsap from 'gsap';
-import { easings } from '@/lib/gsap';
+import { gsap, easings } from '@/lib/gsap';
 import { cn } from '@/lib/utils';
 import Magnetic from '@/components/animations/magnetic';
 

@@ -1,10 +1,7 @@
 'use client';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { RefObject, useEffect, useRef } from 'react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Text content - 2-line hierarchy
 // Line 1: "VishnuHQ" (biggest)
@@ -117,11 +114,12 @@ export function LetterCollision() {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    animateLettersOnScroll(containerRef);
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    const ctx = gsap.context(() => {
+      animateLettersOnScroll(containerRef);
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   // Calculate cumulative letter indices for each word

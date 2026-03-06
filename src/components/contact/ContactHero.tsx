@@ -1,10 +1,7 @@
 'use client';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { RefObject, useEffect, useRef } from 'react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Text content for contact page hero
 // Line 1: "Vishnu Vardhan Putta" - each word separate to prevent breaking
@@ -120,11 +117,12 @@ export function ContactHero() {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    animateLettersOnScroll(containerRef);
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    const ctx = gsap.context(() => {
+      animateLettersOnScroll(containerRef);
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   // Calculate cumulative letter indices for continuous animation

@@ -1,7 +1,7 @@
 'use client';
 
 import { PropsWithChildren, useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { gsap } from '@/lib/gsap';
 import { ArrowRight } from 'lucide-react';
 import Magnetic from '@/components/animations/magnetic';
 import { cn } from '@/lib/utils';
@@ -42,6 +42,10 @@ export default function PillButton({
         { top: '-150%', width: '125%', duration: 0.12 },
         'exit'
       );
+
+    return () => {
+      timeline.current?.kill();
+    };
   }, []);
 
   const manageMouseEnter = () => {

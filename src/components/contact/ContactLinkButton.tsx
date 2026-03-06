@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { gsap } from '@/lib/gsap';
 import { SocialIcon } from '@/components/icons/SocialIcons';
 import Magnetic from '@/components/animations/magnetic';
 
@@ -37,6 +37,10 @@ export function ContactLinkButton({ name, url, icon, displayText }: ContactLinkB
         { top: '-150%', width: '125%', duration: 0.12 },
         'exit'
       );
+
+    return () => {
+      timeline.current?.kill();
+    };
   }, []);
 
   const manageMouseEnter = () => {
