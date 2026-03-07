@@ -24,6 +24,9 @@ export {
 // Personal Info
 export { personalInfo } from './personal';
 
+// Navigation
+export { navLinks } from './navigation';
+
 // About page
 export {
   getExperienceTimeline,

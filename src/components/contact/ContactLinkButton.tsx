@@ -25,6 +25,8 @@ export function ContactLinkButton({ name, url, icon, displayText }: ContactLinkB
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     timeline.current = gsap.timeline({ paused: true });
     timeline.current
       .to(
@@ -40,6 +42,7 @@ export function ContactLinkButton({ name, url, icon, displayText }: ContactLinkB
 
     return () => {
       timeline.current?.kill();
+      if (timeoutId.current) clearTimeout(timeoutId.current);
     };
   }, []);
 

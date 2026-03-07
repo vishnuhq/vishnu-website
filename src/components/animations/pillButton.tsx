@@ -47,6 +47,7 @@ export default function PillButton({
 
     return () => {
       timeline.current?.kill();
+      if (timeoutId.current) clearTimeout(timeoutId.current);
     };
   }, []);
 

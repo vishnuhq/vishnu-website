@@ -123,6 +123,7 @@ export default function MenuButton({
 
     return () => {
       hoverTimeline.current?.kill();
+      if (timeoutId.current) clearTimeout(timeoutId.current);
     };
   }, []);
 

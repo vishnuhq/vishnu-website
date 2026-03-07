@@ -47,7 +47,7 @@ function WorkCard({
             alt={item.title}
             src={item.mainImage}
             fill
-            style={{ objectFit: 'contain' }}
+            className="object-contain"
             sizes="(max-width: 640px) 70vw, 30vw"
             onError={() => setImageError(true)}
           />

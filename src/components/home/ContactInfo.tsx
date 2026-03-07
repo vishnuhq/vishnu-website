@@ -54,7 +54,6 @@ export default function ContactInfo() {
                 alt={name}
                 fill
                 className="object-cover"
-                priority
                 sizes="100px"
               />
             </div>

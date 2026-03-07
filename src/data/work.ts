@@ -6,7 +6,7 @@ import type { Work, WorkCategory } from '@/types';
  * Work items are ordered by the `order` field (lower = first)
  * Featured items appear on the home page
  */
-export const work: Work[] = [
+const work: Work[] = [
   {
     slug: 'filetrace',
     title: 'FileTrace',

@@ -7,7 +7,7 @@ import { gsap, easings } from '@/lib/gsap';
 import { cn } from '@/lib/utils';
 import Magnetic from '@/components/animations/magnetic';
 import MenuButton from './MenuButton';
-import { navLinks } from '@/data/navigation';
+import { navLinks } from '@/data';
 
 // Animation timing constants (2x faster than original)
 const TIMING = {
@@ -134,11 +134,13 @@ export default function Menu() {
 
       // Check at various times to handle different timing scenarios
       requestAnimationFrame(checkScroll);
-      setTimeout(checkScroll, 100);
-      setTimeout(checkScroll, 500); // After template.tsx scrollTo(0,0) at 400ms
+      const timer1 = setTimeout(checkScroll, 100);
+      const timer2 = setTimeout(checkScroll, 500); // After template.tsx scrollTo(0,0) at 400ms
 
       return () => {
         window.removeEventListener('scroll', handleScroll);
+        clearTimeout(timer1);
+        clearTimeout(timer2);
       };
     } else {
       // Non-homepage: always visible

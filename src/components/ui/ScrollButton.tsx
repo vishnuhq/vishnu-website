@@ -35,7 +35,7 @@ export default function ScrollButton({ targetId }: { targetId: string }) {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);

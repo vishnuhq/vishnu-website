@@ -4,7 +4,7 @@ import SlidingImages from '@/components/home/SlidingImages';
 import { LetterCollision } from '@/components/animations/textAnimations/scrollText';
 import Description from '@/components/home/Description/description';
 import ScrollButton from '@/components/ui/ScrollButton';
-import { getFeaturedWork } from '@/data/work';
+import { getFeaturedWork } from '@/data';
 
 export default function Home() {
   const featuredWork = getFeaturedWork().slice(0, 6);

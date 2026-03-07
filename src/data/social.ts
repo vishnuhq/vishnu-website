@@ -4,7 +4,7 @@ import type { SocialLink } from '@/types';
  * Social media and professional links
  * displayOrder determines position on contact page (lower = first)
  */
-export const socialLinks: SocialLink[] = [
+const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/vishnuhq',
