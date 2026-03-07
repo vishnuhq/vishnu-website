@@ -17,7 +17,6 @@ export {
 
 // Social Links
 export {
-  getPrimarySocialLinks,
   getFooterSocialLinks,
   getContactPageLinks,
 } from './social';

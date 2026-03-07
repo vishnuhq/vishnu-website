@@ -43,7 +43,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'YouTube',
-    url: 'https://youtube.com/@vishnuhq',
+    url: 'https://www.youtube.com/@vishnuhq',
     icon: 'youtube',
     primary: false,
     username: '@vishnuhq',
@@ -51,13 +51,6 @@ export const socialLinks: SocialLink[] = [
     displayOrder: 6,
   },
 ];
-
-/**
- * Get primary social links (for footer, contact highlights)
- */
-export function getPrimarySocialLinks(): SocialLink[] {
-  return socialLinks.filter((link) => link.primary);
-}
 
 /**
  * Get footer social links (GitHub, LinkedIn, Instagram only)

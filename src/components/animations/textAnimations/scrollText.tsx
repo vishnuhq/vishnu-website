@@ -135,7 +135,7 @@ export function LetterCollision() {
   const idx6 = idx5 + word5.length;
 
   return (
-    <div ref={containerRef} className="scroll-smooth bg-background">
+    <div ref={containerRef} className="bg-background">
       <h1 className="sr-only">VishnuHQ - I make software slightly less chaotic</h1>
       <div aria-hidden="true" className="flex h-screen flex-col items-center justify-center gap-2 px-4 pb-24 sm:gap-4 sm:px-8">
         {/* Line 1: VishnuHQ (biggest) */}
