@@ -30,6 +30,8 @@ export default function PillButton({
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     timeline.current = gsap.timeline({ paused: true });
     timeline.current
       .to(

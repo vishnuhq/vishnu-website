@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState, useCallback, type RefObject } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { gsap, easings } from '@/lib/gsap';
@@ -233,16 +233,58 @@ export default function Menu() {
     }
   }, [isActive, isMobile, isMounted]);
 
-  // Handle escape key
+  // Handle escape key + focus trap when menu is open
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isActive) {
+    if (!isActive) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
         setIsActive(false);
+        return;
+      }
+
+      if (e.key !== 'Tab') return;
+
+      // Collect focusable elements: menu links + menu button
+      const menuFocusable = menuRef.current?.querySelectorAll<HTMLElement>(
+        'a[href], button, [tabindex]:not([tabindex="-1"])'
+      );
+      const buttonEl =
+        buttonContainerRef.current?.querySelector<HTMLElement>('button');
+      if (!menuFocusable?.length && !buttonEl) return;
+
+      const elements: HTMLElement[] = [
+        ...(menuFocusable ? Array.from(menuFocusable) : []),
+        ...(buttonEl ? [buttonEl] : []),
+      ];
+
+      const first = elements[0];
+      const last = elements[elements.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
       }
     };
 
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isActive]);
+
+  // Restore focus to menu button when menu closes
+  const prevActiveRef: RefObject<boolean> = useRef(false);
+  useEffect(() => {
+    if (prevActiveRef.current && !isActive) {
+      requestAnimationFrame(() => {
+        buttonContainerRef.current
+          ?.querySelector<HTMLElement>('button')
+          ?.focus();
+      });
+    }
+    prevActiveRef.current = isActive;
   }, [isActive]);
 
   // Link component shared between mobile and desktop
@@ -299,6 +341,7 @@ export default function Menu() {
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
+        aria-hidden={!isActive}
         className={cn(
           isMobile
             ? // Mobile: Full-page, circle originates from bottom-right (button position)

@@ -106,6 +106,8 @@ export default function MenuButton({
 
   // Hover sweep animation (adapted for circular button)
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     hoverTimeline.current = gsap.timeline({ paused: true });
     hoverTimeline.current
       .to(
@@ -118,6 +120,10 @@ export default function MenuButton({
         { top: '-150%', width: '125%', duration: 0.12 },
         'exit'
       );
+
+    return () => {
+      hoverTimeline.current?.kill();
+    };
   }, []);
 
   const handleMouseEnter = () => {

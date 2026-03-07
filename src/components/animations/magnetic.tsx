@@ -19,6 +19,7 @@ export default function Magnetic({ children, fullWidth = false }: MagneticProps)
 
   useEffect(() => {
     if (!magnetic.current) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const element = magnetic.current;
 

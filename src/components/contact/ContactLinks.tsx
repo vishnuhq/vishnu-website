@@ -64,6 +64,7 @@ export function ContactLinks() {
     <section
       ref={containerRef}
       className="flex flex-col items-center justify-center bg-white px-6 py-16 sm:px-12 sm:py-24"
+      aria-label="Contact links and social profiles"
     >
       {/* Intro Text */}
       <div className="mb-12 max-w-4xl text-center sm:mb-16">
