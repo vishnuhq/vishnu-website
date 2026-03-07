@@ -313,7 +313,7 @@ function DetailModal({
         <button
           ref={closeButtonRef}
           onClick={onClose}
-          className="absolute right-4 top-4 rounded-full p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-teal-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+          className="absolute right-3 top-3 flex items-center justify-center rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-teal-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
           aria-label="Close dialog"
         >
           <svg

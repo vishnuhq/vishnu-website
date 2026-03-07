@@ -109,6 +109,8 @@ export default function RootLayout({
                 'https://github.com/vishnuhq',
                 'https://www.linkedin.com/in/vishnuhq',
                 'https://www.instagram.com/vishnuhq',
+                'https://leetcode.com/vishnuhq',
+                'https://www.youtube.com/@vishnuhq',
               ],
               knowsAbout: [
                 'Full Stack Development',

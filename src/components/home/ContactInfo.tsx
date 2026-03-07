@@ -107,7 +107,7 @@ export default function ContactInfo() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-300 transition-colors hover:bg-teal-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-gray-800 text-gray-300 transition-colors hover:bg-teal-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     aria-label={`Visit ${link.name}`}
                   >
                     <SocialIcon name={link.icon} className="h-5 w-5" />
